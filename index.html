@@ -1,0 +1,320 @@
+<!-- TO DO 
+    - FIX SECTION ANCHORS WITH FIXED HEADER
+    - SCROLLTOP CHECK AND ACTIVE STATES -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--Bootstrap-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <!--Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <!-- Fontawesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <!-- My CSS -->
+    <link href="index.css" rel="stylesheet">
+    <title>W3.5 Schools</title>
+</head>
+<body>
+    <!--Header and Nav-->
+    <header>
+        <div class="headCont">
+            <h4 class="bounceIn">W3.5 Schools</h4>
+            <nav">
+                <!-- Main -->
+                <div class="mainLinks">
+                    <a href="#intro" >Introduction</a>
+                    <a href="#function">Functions</a>
+                    <a href="#object">Objects</a>
+                    <a href="#array">Arrays</a>
+                </div>
+                <!-- Mobile -->
+                <div class="mobileContainer">
+                    <div class="mobileLinkButton" onclick="showLinks()">
+                        <i class="fas fa-bars"></i>
+                    </div>
+                    <div class="mainLinksMobile">
+                        <a href="#intro">Introduction</a>
+                        <a href="#function">Functions</a>
+                        <a href="#object">Objects</a>
+                        <a href="#array">Arrays</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container-fluid fixedPad">
+        <div class="row">
+            <sidebar class="col-lg-2">
+                <div class="content">
+                    <article class="learnLinks">
+                        <div class="alternateLinksHead">
+                            <h5>More Learning</h5>
+                            <i class="fas fa-chevron-circle-down" onclick="altShow()"></i>
+                        </div>
+                        <div class="altLinks">
+                        <!--Links for outside sources-->
+                        <a target="blank" href="https://www.w3schools.com/">W3 Schools</a>
+                        <a target="blank" href="https://developer.mozilla.org/en-US/">MDN Docs</a>
+                        <a target="blank" href="https://www.reddit.com/r/programming/">Reddit</a>
+                        <a target="blank" href="https://learn.freecodecamp.org/">FreeCodeCamp</a>
+                        <a target="blank" href="https://www.codecademy.com/">CodeAcademy</a>
+                        <a target="blank" href="https://www.udemy.com/">Udemy</a>
+                        </div>
+                    </article>
+                </div>
+            </sidebar>
+            <main class="col-12 col-md-9 col-lg-8">
+                <div class="content">
+                    <!--Intro-->
+                    <span class="anchor" id="intro"></span>
+                    <section>
+                        <h1>Introduction</h1>
+                        <article>
+                            <p>
+                                Welcome to W3.5 Schools!
+                                We are here to briefly explain some information in JavaScript.
+                                Unfortunately, we are not as well veresed or professional as
+                                those guys over at W3 Schools
+                                (if you ask us, they have too much free time on their hands...).
+                                But we are happy you chose us to learn a little bit extra today
+                                - happy coding!
+                            </p>
+                        </article>
+                    </section>
+                    <!--Functions-->
+                    <span class="anchor" id="function"></span>
+                    <section>
+                        <h1>Functions</h1>
+                        <article>
+                            <p>A JavaScript function is a block of code designed to perform a particular task.</p>
+                            <p>A JavaScript function is executed when "something" invokes it (calls it).</p>
+                        </article>
+                        <article>
+                            <h3>Syntax</h3>
+                            
+                            <p>A JavaScript function is defined with the function keyword, followed by a name, followed by parentheses ().</p>
+                
+                            <div class="example">
+                                <h5>Example</h5>
+                            <p>
+                                <span class="green">function</span> hello() = {}
+                            </p>
+                        </div>
+                        
+                        <p>Function names can contain letters, digits, underscores, and dollar signs (same rules as variables).</p>
+                        
+                        <p>The parentheses may include parameter names separated by commas: (parameter1, parameter2, ...)</p>
+                        
+                        <p>The code to be executed, by the function, is placed inside curly brackets: {}</p>
+                        
+                        <div class="example">
+                            <h5>Example</h5>
+                            <p>
+                                <span class="green">function</span> hello(name) { <br />
+                                <span class="tab-in"></span>console.log(<span class="brown">"Hello "</span> + name); <br />
+                                }
+                            </p>
+                        </div>
+                        
+                        <p>Function parameters are listed inside the parentheses () in the function definition.</p>
+                        
+                        <p>Function arguments are the values received by the function when it is invoked.</p>
+                        
+                        <p>Inside the function, the arguments (the parameters) behave as local variables.</p>
+                    </article>
+                    <article>
+                        <h3>Invocation</h3>
+                        
+                        <p>The code inside the function will execute when "something" invokes (calls) the function:</p>
+                        
+                        <ul>
+                            <li>When an event occurs (when a user clicks a button)</li>
+                            <li>When it is invoked (called) from JavaScript code</li>
+                            <li>Automatically (self invoked)</li>
+                        </ul>
+                    </article>
+                </section>
+                
+                <!--Objects-->
+                <span class="anchor" id="object"></span>
+                <section>  
+                    <h1>Objects</h1>
+                    <article>
+                        <p>You have already learned that JavaScript variables are containers for data values.</p>
+                        <p>This code assigns a simple value (Fiat) to a variable named car:</p>
+                        <div class="example">
+                            <h5>Example</h5>
+                            <p>
+                                <span class="green">var</span> car = { <br />
+                                <span class="tab-in"></span>name: <span class="brown">"fiat"</span> <br />
+                                }
+                            </p>
+                        </div>
+                    </article>
+                    <article>
+                        <p>Objects are variables too. But objects can contain many values.</p>
+                        <p>This code assigns many values (Fiat, 500, white) to a variable named car:</p>
+                        <div class="example">
+                            <h5>Example</h5>
+                            <p>
+                                <span class="green">var</span> car = { <br />
+                                <span class="tab-in"></span>name: <span class="brown">"Fiat"</span>, <br />
+                                <span class="tab-in"></span>model: <span class="orange">500</span>, <br />
+                                <span class="tab-in"></span>color: <span class="brown">"white"</span> <br />
+                                }
+                            </p>
+                        </div>
+                        <aside>
+                            <p>The values are written as name:value pairs (name and value separated by a colon).</p>
+                            <p>The name:values pairs in JavaScript objects are called properties:</p>
+                        </aside>
+                        <div class="tableContain">
+                            <div class="tableBacksplash">
+
+                                <table>
+                                    <tbody>
+                                        <tr>
+                                            <th>Properties</th>
+                                            <th>Property Values</th>
+                                        </tr>
+                                        <tr>
+                                            <td>Name</td>
+                                            <td>Fiat</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Model</td>
+                                            <td>500</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Color</td>
+                                            <td>White</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            </div>
+                        </article>
+                    <article>
+                        <h3>How to Access or Modify Objects</h3>
+                        <h5>Dot Notation</h5>
+                        <div class="example">
+                            <h5>Example</h5>
+                            <p>
+                                <span class="green">var</span> car = { <br />
+                                <span class="tab-in"></span>name: <span class="brown">"Fiat"</span>, <br />
+                                <span class="tab-in"></span>model: <span class="orange">500</span>, <br />
+                                <span class="tab-in"></span>color: <span class="brown">"white"</span> <br />
+                                } <br />
+                                
+                                console.log(car.name); <span class="comment">// Prints "Fiat"</span><br />
+                                car.name = <span class="brown">"Toyota"</span>; <span class="comment">// Changes car's name property to "Toyota" </span>
+                                
+                            </p>
+                        </div>
+                        <h5>Bracket Notation</h5>
+                        <div class="example">
+                            <h5>Example</h5>
+                            <p>
+                                    <span class="green">var</span> car = { <br />
+                                    <span class="tab-in"></span>name: <span class="brown">"Fiat"</span>, <br />
+                                    <span class="tab-in"></span>model: <span class="orange">500</span>, <br />
+                                    <span class="tab-in"></span>color: <span class="brown">"white"</span> <br />
+                                    } <br />
+                                
+                                console.log(car[name]); <span class="comment">// Prints "Fiat"</span><br />
+                                car[name] = <span class="brown">"Toyota"</span>; <span class="comment">// Changes car's name property to "Toyota" </span>
+                                
+                            </p>
+                        </div>
+                    </article>
+                </section>
+                
+                <!--Arrays-->
+                <span class="anchor" id="array"></span>
+                <section>
+                    <h1>Arrays</h1>
+                    <article>
+                        <p>JavaScript arrays are used to store multiple values in a single variable.</p>
+                        <div class="example">
+                            <h5>Example</h5>
+                            <p>
+                            <span class="green">var</span> cars = [<span class="brown">"Saab"</span>, <span class="brown">"Volvo"</span>, <span class="brown">"BMW"</span>]; 
+                            </p>
+                        </div>
+                    </article>
+                    <article>
+                        <h3>Syntax</h3>
+                        <p>Using an array literal is the easiest way to create a JavaScript Array.</p>
+                        <div class="example">
+                            <h5>Example</h5>
+                            <p>
+                                <span class="green">var</span> array_name = [item1, item2, ...];
+                            </p>
+                        </div>
+                    </article>
+                    <article>
+                        <h3>Accessing Elements in an Array</h3>
+                        <p>You access an array element by referring to the index number.</p>
+                        <p>This statement accesses the value of the first element in cars:</p>
+                        <div class="example">
+                            <p>
+                                <span class="green">var</span> name = cars[<span class="orange">0</span>];
+                            </p>
+                        </div>
+                    </article>
+                    <article>
+                        <p>JavaScript variables can be objects. Arrays are special kinds of objects.</p>
+                        <p>Because of this, you can have variables of different types in the same Array.</p>
+                        <p>You can have objects in an Array. You can have functions in an Array. You can have arrays in an Array:</p>
+                        <div class="example">
+                            <h5>Example</h5>
+                            <p>
+                                myArray[<span class="orange">0</span>] = Date.now; <br />
+                                myArray[<span class="orange">1</span>] = myFunction; <br />
+                                myArray[<span class="orange">2</span>] = myCars; <br />
+                            </p>
+                        </div>
+                    </article>
+                </section>
+                </div> <!--End content-->
+            </main>
+            
+            <!--About the author-->
+            <sidebar class="col-12 col-md-3 col-lg-2">
+                <div class="content">
+                    <article class="authorAbt">
+                        <h5>About the Author</h5>
+                        <!--Photo-->
+                        <div>
+                            <img src="https://avatars1.githubusercontent.com/u/34077024?s=460&v=4">
+                        </div>
+                        <!--Bio-->
+                        <p><em>Jake Ikola - Professional live mannequin</em></p>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                        </p>
+                    </article>
+                </div>
+            </sidebar>
+            
+        </div> <!--End row-->
+    </div> <!--End container-->
+    
+    <!--Footer-->
+    <footer>
+        <p>&copy; W3.5 Schools 2019</p>
+    </footer>
+    
+    <!--Bootstrap-->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+    <script src="main.js"></script>
+</body>
+</html>
