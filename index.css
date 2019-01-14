@@ -22,6 +22,7 @@ header {
     width: 100%;
     height: 64px;
     opacity: 1;
+    transition: .3s;
 }
 
 @media screen and (max-width: 768px) {
@@ -197,6 +198,7 @@ header h4 {
 
 .mainLinks a:hover, .mainLinksMobile a:hover, .learnLinks a:hover .active {
     color: #00a7e1 !important;
+    text-decoration: underline;
 }
 
 .content {
